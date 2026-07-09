@@ -1,6 +1,6 @@
-# SenFlow:Inter-Sentence Flow Modeling for AI-Generated Text Detection in Hybrid Documents
+# SenFlow: Inter-Sentence Flow Modeling for AI-Generated Text Detection in Hybrid Documents
 
-This repository contains the official codebase and a toy subset of the MOSAIC benchmark for the paper "SenFlow: Inter-Sentence Flow Modeling for AI-Generated Text Detection in Hybrid Documents". 
+This repository contains the official codebase and a license-aware sample of the MOSAIC benchmark for the paper "SenFlow: Inter-Sentence Flow Modeling for AI-Generated Text Detection in Hybrid Documents".
 
 ## 1. Environment Setup
 
@@ -30,7 +30,7 @@ python generate_mosaic.py \
 
 ### Stage 2: Feature Extraction
 
-To extract token probabilities, entropies, and proxy-model hidden states using the LoRA-aligned Llama-3.1-8B-Instruct:
+After reconstructing the full MOSAIC files locally from the upstream datasets, extract token probabilities, entropies, and proxy-model hidden states using the LoRA-aligned Llama-3.1-8B-Instruct:
 
 ```
 python prepare_features.py \
@@ -53,4 +53,6 @@ python run_senflow_pipeline.py \
 
 ## Data Availability
 
-For double-blind review purposes, a compressed sample of the MOSAIC dataset (`MOSAIC.zip`) is included in this repository to verify the pipeline.
+For double-blind review purposes, this repository includes a small license-aware format sample at `MOSAIC/MOSAIC_sample_license_aware.json`. The sample contains metadata, document references, sentence labels/spans, and AI-generated replacement sentences, but does not redistribute full source documents from the upstream PubMed/XSum corpora.
+
+The full MOSAIC benchmark is intended to be reconstructed locally from the upstream datasets using the released generation scripts, prompts, seeds, and configuration, subject to the upstream datasets' license and redistribution terms. See `DATA_RELEASE.md` for the release policy.

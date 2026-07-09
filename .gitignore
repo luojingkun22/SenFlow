@@ -78,6 +78,13 @@ target/
 # Jupyter Notebook
 .ipynb_checkpoints
 
+# Full MOSAIC data files containing upstream source text.
+# Public releases should use license-aware samples or local reconstruction.
+MOSAIC.zip
+MOSAIC/MOSAIC/*_4000.json
+MOSAIC/MOSAIC/*_full*.json
+MOSAIC/MOSAIC/*_complete*.json
+
 # IPython
 profile_default/
 ipython_config.py

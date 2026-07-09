@@ -1,0 +1,2354 @@
+{
+  "README": "License-aware MOSAIC format sample. Full source text is not redistributed in this public sample; reconstruct from upstream datasets using the released scripts/configuration subject to upstream licenses.",
+  "fields": {
+    "source_shuffled_index": "Index in the seed-42 shuffled upstream split used by the generation script; recoverable from doc_id suffix.",
+    "sentence_labels": "0=human/source sentence, 1=AI-generated replacement sentence.",
+    "ai_replacements": "AI-generated replacement sentences extracted from hybrid_text at ai_indices.",
+    "sentence_spans": "Character spans in the original full hybrid document; retained for schema compatibility."
+  },
+  "cells": [
+    {
+      "metadata": {
+        "domain": "pubmed",
+        "generator": "deepseek",
+        "subgroup_id": 0,
+        "oracle_model": "Llama-3.1-8B-Instruct (bf16)",
+        "mask_gamma": 0.3,
+        "mask_strategy": "block_random (1-3 blocks)",
+        "max_seq_len": 20,
+        "max_word_len": 96,
+        "ppl_margin": 15.0,
+        "total_samples": 4000,
+        "split": {
+          "train": 2800,
+          "val": 600,
+          "test": 600
+        },
+        "version": "v2.1"
+      },
+      "examples": [
+        {
+          "split": "train",
+          "doc_id": "pubmed_deepseek_002766",
+          "source_shuffled_index": 2766,
+          "domain": "pubmed",
+          "generator": "deepseek",
+          "subgroup_id": 0,
+          "num_sentences": 20,
+          "mask_ratio": 0.3,
+          "ai_indices": [
+            3,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sentence_labels": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              139
+            ],
+            [
+              140,
+              329
+            ],
+            [
+              330,
+              566
+            ],
+            [
+              567,
+              638
+            ],
+            [
+              639,
+              916
+            ],
+            [
+              917,
+              1174
+            ],
+            [
+              1175,
+              1245
+            ],
+            [
+              1246,
+              1321
+            ],
+            [
+              1322,
+              1405
+            ],
+            [
+              1406,
+              1478
+            ],
+            [
+              1479,
+              1549
+            ],
+            [
+              1550,
+              1635
+            ],
+            [
+              1636,
+              1705
+            ],
+            [
+              1706,
+              1806
+            ],
+            [
+              1807,
+              1835
+            ],
+            [
+              1836,
+              1954
+            ],
+            [
+              1955,
+              2037
+            ],
+            [
+              2038,
+              2336
+            ],
+            [
+              2337,
+              2596
+            ],
+            [
+              2597,
+              2949
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 3,
+              "text": "temporal partitioning has been observed in a variety of animal groups ."
+            },
+            {
+              "sentence_index": 7,
+              "text": "advertisement calls are used by males to attract females and deter rivals ."
+            },
+            {
+              "sentence_index": 8,
+              "text": "call characteristics often differ among species to facilitate mate identification ."
+            },
+            {
+              "sentence_index": 9,
+              "text": "the timing and intensity of calling can be affected by abiotic factors ."
+            },
+            {
+              "sentence_index": 10,
+              "text": "such temporal differences in calling may promote species coexistence ."
+            },
+            {
+              "sentence_index": 11,
+              "text": "in temperate zones , calling activity is often seasonal due to climatic constraints ."
+            }
+          ],
+          "original_ppl": 9.957,
+          "hybrid_ppl": 10.685
+        },
+        {
+          "split": "train",
+          "doc_id": "pubmed_deepseek_000320",
+          "source_shuffled_index": 320,
+          "domain": "pubmed",
+          "generator": "deepseek",
+          "subgroup_id": 0,
+          "num_sentences": 20,
+          "mask_ratio": 0.3,
+          "ai_indices": [
+            10,
+            11,
+            12,
+            14,
+            15,
+            17
+          ],
+          "sentence_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              53
+            ],
+            [
+              54,
+              140
+            ],
+            [
+              141,
+              225
+            ],
+            [
+              226,
+              306
+            ],
+            [
+              307,
+              429
+            ],
+            [
+              430,
+              606
+            ],
+            [
+              607,
+              729
+            ],
+            [
+              730,
+              1431
+            ],
+            [
+              1432,
+              1598
+            ],
+            [
+              1599,
+              1735
+            ],
+            [
+              1736,
+              1810
+            ],
+            [
+              1811,
+              1878
+            ],
+            [
+              1879,
+              1933
+            ],
+            [
+              1934,
+              2049
+            ],
+            [
+              2050,
+              2123
+            ],
+            [
+              2124,
+              2200
+            ],
+            [
+              2201,
+              2235
+            ],
+            [
+              2236,
+              2304
+            ],
+            [
+              2305,
+              2612
+            ],
+            [
+              2613,
+              2691
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 10,
+              "text": "for groups h and g , the teeth were dried thoroughly with an air syringe ."
+            },
+            {
+              "sentence_index": 11,
+              "text": "the sealant was applied according to the manufacturer 's protocol ."
+            },
+            {
+              "sentence_index": 12,
+              "text": "the application was done using a brush or applicator ."
+            },
+            {
+              "sentence_index": 14,
+              "text": "after sealant application , the teeth were light - cured for 20 seconds ."
+            },
+            {
+              "sentence_index": 15,
+              "text": "the roots and coronal surfaces were coated with two layers of nail varnish ."
+            },
+            {
+              "sentence_index": 17,
+              "text": "for identification , each group was assigned a specific color code ."
+            }
+          ],
+          "original_ppl": 9.389,
+          "hybrid_ppl": 9.973
+        },
+        {
+          "split": "val",
+          "doc_id": "pubmed_deepseek_003703",
+          "source_shuffled_index": 3703,
+          "domain": "pubmed",
+          "generator": "deepseek",
+          "subgroup_id": 0,
+          "num_sentences": 20,
+          "mask_ratio": 0.3,
+          "ai_indices": [
+            8,
+            9,
+            10,
+            11,
+            13,
+            14
+          ],
+          "sentence_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              225
+            ],
+            [
+              226,
+              370
+            ],
+            [
+              371,
+              612
+            ],
+            [
+              613,
+              815
+            ],
+            [
+              816,
+              1027
+            ],
+            [
+              1028,
+              1310
+            ],
+            [
+              1311,
+              1542
+            ],
+            [
+              1543,
+              1722
+            ],
+            [
+              1723,
+              1826
+            ],
+            [
+              1827,
+              1928
+            ],
+            [
+              1929,
+              2044
+            ],
+            [
+              2045,
+              2128
+            ],
+            [
+              2129,
+              2337
+            ],
+            [
+              2338,
+              2429
+            ],
+            [
+              2430,
+              2524
+            ],
+            [
+              2525,
+              2700
+            ],
+            [
+              2701,
+              2988
+            ],
+            [
+              2989,
+              3248
+            ],
+            [
+              3249,
+              3451
+            ],
+            [
+              3452,
+              3627
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 8,
+              "text": "genetic studies have identified several candidate genes associated with pain perception and analgesia ."
+            },
+            {
+              "sentence_index": 9,
+              "text": "these include genes involved in neurotransmitter systems , ion channels , and inflammatory pathways ."
+            },
+            {
+              "sentence_index": 10,
+              "text": "furthermore , genome - wide association studies have uncovered novel loci contributing to chronic pain conditions ."
+            },
+            {
+              "sentence_index": 11,
+              "text": "such findings have spurred interest in translational research using animal models ."
+            },
+            {
+              "sentence_index": 13,
+              "text": "however , the complexity of pain involves multiple genetic and environmental interactions ."
+            },
+            {
+              "sentence_index": 14,
+              "text": "this complexity often limits the direct application of genetic findings to clinical practice ."
+            }
+          ],
+          "original_ppl": 11.817,
+          "hybrid_ppl": 11.945
+        },
+        {
+          "split": "test",
+          "doc_id": "pubmed_deepseek_002159",
+          "source_shuffled_index": 2159,
+          "domain": "pubmed",
+          "generator": "deepseek",
+          "subgroup_id": 0,
+          "num_sentences": 20,
+          "mask_ratio": 0.3,
+          "ai_indices": [
+            6,
+            7,
+            8,
+            11,
+            12,
+            13
+          ],
+          "sentence_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              117
+            ],
+            [
+              118,
+              264
+            ],
+            [
+              265,
+              416
+            ],
+            [
+              417,
+              684
+            ],
+            [
+              685,
+              794
+            ],
+            [
+              795,
+              1016
+            ],
+            [
+              1017,
+              1110
+            ],
+            [
+              1111,
+              1192
+            ],
+            [
+              1193,
+              1279
+            ],
+            [
+              1280,
+              1374
+            ],
+            [
+              1375,
+              1482
+            ],
+            [
+              1483,
+              1562
+            ],
+            [
+              1563,
+              1637
+            ],
+            [
+              1638,
+              1703
+            ],
+            [
+              1704,
+              1823
+            ],
+            [
+              1824,
+              1973
+            ],
+            [
+              1974,
+              2189
+            ],
+            [
+              2190,
+              2449
+            ],
+            [
+              2450,
+              2702
+            ],
+            [
+              2703,
+              3066
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 6,
+              "text": "on clinical examination , she had diffuse abdominal tenderness without localized peritonism ."
+            },
+            {
+              "sentence_index": 7,
+              "text": "her temperature was 37 . 8 degrees celsius , and she appeared mildly dehydrated ."
+            },
+            {
+              "sentence_index": 8,
+              "text": "given her history of alcohol excess , pancreatitis was considered a likely diagnosis ."
+            },
+            {
+              "sentence_index": 11,
+              "text": "given the diagnostic uncertainty , a computed tomography scan was recommended ."
+            },
+            {
+              "sentence_index": 12,
+              "text": "the patient underwent a contrast - enhanced ct of the abdomen and pelvis ."
+            },
+            {
+              "sentence_index": 13,
+              "text": "imaging was reviewed for signs of inflammation , obstruction , or"
+            }
+          ],
+          "original_ppl": 6.665,
+          "hybrid_ppl": 8.693
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "domain": "pubmed",
+        "generator": "kimi",
+        "subgroup_id": 1,
+        "oracle_model": "Llama-3.1-8B-Instruct (bf16)",
+        "mask_gamma": 0.3,
+        "mask_strategy": "block_random (1-3 blocks)",
+        "max_seq_len": 20,
+        "max_word_len": 96,
+        "ppl_margin": 15.0,
+        "total_samples": 4000,
+        "split": {
+          "train": 2800,
+          "val": 600,
+          "test": 600
+        },
+        "version": "v2.1"
+      },
+      "examples": [
+        {
+          "split": "train",
+          "doc_id": "pubmed_kimi_001987",
+          "source_shuffled_index": 1987,
+          "domain": "pubmed",
+          "generator": "kimi",
+          "subgroup_id": 1,
+          "num_sentences": 20,
+          "mask_ratio": 0.3,
+          "ai_indices": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "sentence_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              274
+            ],
+            [
+              275,
+              614
+            ],
+            [
+              615,
+              840
+            ],
+            [
+              841,
+              1016
+            ],
+            [
+              1017,
+              1142
+            ],
+            [
+              1143,
+              1321
+            ],
+            [
+              1322,
+              1672
+            ],
+            [
+              1673,
+              1932
+            ],
+            [
+              1933,
+              2231
+            ],
+            [
+              2232,
+              2502
+            ],
+            [
+              2503,
+              2738
+            ],
+            [
+              2739,
+              2959
+            ],
+            [
+              2960,
+              3062
+            ],
+            [
+              3063,
+              3261
+            ],
+            [
+              3262,
+              3457
+            ],
+            [
+              3458,
+              3654
+            ],
+            [
+              3655,
+              3892
+            ],
+            [
+              3893,
+              4084
+            ],
+            [
+              4085,
+              4260
+            ],
+            [
+              4261,
+              4442
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 13,
+              "text": "community - based participatory research approaches have shown promise for developing culturally tailored interventions that address the unique barriers faced by low - income and minority families ."
+            },
+            {
+              "sentence_index": 14,
+              "text": "however , few studies have examined the effectiveness of brief , low - intensity interventions that could be readily implemented in community settings such as wic clinics or head start programs ."
+            },
+            {
+              "sentence_index": 15,
+              "text": "additionally , interventions targeting preschool - aged children may be more effective for establishing lifelong healthy behaviors compared to those implemented during later developmental stages ."
+            },
+            {
+              "sentence_index": 16,
+              "text": "emerging evidence suggests that technology - enhanced interventions , including text messaging and mobile applications , may provide cost - effective alternatives for delivering behavioral interventions to hard - to - reach populations ."
+            },
+            {
+              "sentence_index": 17,
+              "text": "despite these innovations , significant disparities persist in access to obesity prevention resources , particularly in rural communities and urban neighborhoods with limited infrastructure ."
+            },
+            {
+              "sentence_index": 18,
+              "text": "therefore , there is an urgent need to develop and test scalable intervention models that can be sustained through existing public health systems and community organizations ."
+            }
+          ],
+          "original_ppl": 7.926,
+          "hybrid_ppl": 7.866
+        },
+        {
+          "split": "train",
+          "doc_id": "pubmed_kimi_000238",
+          "source_shuffled_index": 238,
+          "domain": "pubmed",
+          "generator": "kimi",
+          "subgroup_id": 1,
+          "num_sentences": 20,
+          "mask_ratio": 0.3,
+          "ai_indices": [
+            9,
+            10,
+            11,
+            12,
+            17,
+            18
+          ],
+          "sentence_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              263
+            ],
+            [
+              264,
+              586
+            ],
+            [
+              587,
+              1096
+            ],
+            [
+              1097,
+              1356
+            ],
+            [
+              1357,
+              1440
+            ],
+            [
+              1441,
+              1591
+            ],
+            [
+              1592,
+              1733
+            ],
+            [
+              1734,
+              1844
+            ],
+            [
+              1845,
+              1952
+            ],
+            [
+              1953,
+              2178
+            ],
+            [
+              2179,
+              2313
+            ],
+            [
+              2314,
+              2497
+            ],
+            [
+              2498,
+              2626
+            ],
+            [
+              2627,
+              2672
+            ],
+            [
+              2673,
+              2998
+            ],
+            [
+              2999,
+              3082
+            ],
+            [
+              3083,
+              3140
+            ],
+            [
+              3141,
+              3262
+            ],
+            [
+              3263,
+              3357
+            ],
+            [
+              3358,
+              3554
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 9,
+              "text": "to investigate whether ap possessors exhibit enhanced auditory discrimination abilities for speech sounds , we conducted a series of behavioral experiments comparing ap and non - ap musicians on phoneme identification tasks ."
+            },
+            {
+              "sentence_index": 10,
+              "text": "twenty - eight right - handed volunteers ( 14 ap possessors and 14 matched controls ) with normal hearing participated in this study ."
+            },
+            {
+              "sentence_index": 11,
+              "text": "all participants had at least 10 years of formal musical training starting before age 7 , with no significant group differences in training duration ( t ( 26 ) = 0 .42 , p = 0 .68 ) ."
+            },
+            {
+              "sentence_index": 12,
+              "text": "participants were screened for neurological and psychiatric disorders , and gave written informed consent before participation ."
+            },
+            {
+              "sentence_index": 17,
+              "text": "participants responded by pressing one of 12 labeled keys on a computer keyboard , corresponding to the chromatic scale ."
+            },
+            {
+              "sentence_index": 18,
+              "text": "the entire testing session lasted approximately 45 minutes , including breaks between blocks ."
+            }
+          ],
+          "original_ppl": 7.388,
+          "hybrid_ppl": 7.892
+        },
+        {
+          "split": "val",
+          "doc_id": "pubmed_kimi_002623",
+          "source_shuffled_index": 2623,
+          "domain": "pubmed",
+          "generator": "kimi",
+          "subgroup_id": 1,
+          "num_sentences": 20,
+          "mask_ratio": 0.3,
+          "ai_indices": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "sentence_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              237
+            ],
+            [
+              238,
+              415
+            ],
+            [
+              416,
+              535
+            ],
+            [
+              536,
+              717
+            ],
+            [
+              718,
+              889
+            ],
+            [
+              890,
+              1073
+            ],
+            [
+              1074,
+              1269
+            ],
+            [
+              1270,
+              1434
+            ],
+            [
+              1435,
+              1612
+            ],
+            [
+              1613,
+              1794
+            ],
+            [
+              1795,
+              1940
+            ],
+            [
+              1941,
+              2138
+            ],
+            [
+              2139,
+              2377
+            ],
+            [
+              2378,
+              2473
+            ],
+            [
+              2474,
+              2612
+            ],
+            [
+              2613,
+              2770
+            ],
+            [
+              2771,
+              2912
+            ],
+            [
+              2913,
+              3187
+            ],
+            [
+              3188,
+              3313
+            ],
+            [
+              3314,
+              3448
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 6,
+              "text": "furthermore , severe anemia is associated with decreased oxygen delivery to peripheral tissues , leading to reduced aerobic capacity and increased cardiovascular strain during physical activity ."
+            },
+            {
+              "sentence_index": 7,
+              "text": "the reduced hemoglobin levels impair the blood's oxygen - carrying capacity , resulting in compensatory tachycardia and increased cardiac workload during exercise ."
+            },
+            {
+              "sentence_index": 8,
+              "text": "this physiological stress may overwhelm the already compromised cardiovascular system in cancer patients , potentially leading to acute cardiac events during exercise sessions ."
+            },
+            {
+              "sentence_index": 9,
+              "text": "additionally , the combination of anemia and cancer cachexia creates a vicious cycle where reduced exercise tolerance leads to further muscle deconditioning and functional decline ."
+            },
+            {
+              "sentence_index": 10,
+              "text": "therefore , careful assessment of hemoglobin levels and cardiac function should precede any exercise prescription in this vulnerable population ."
+            },
+            {
+              "sentence_index": 11,
+              "text": "exercise programs should be individualized based on the patient's hematological parameters , with anemia serving as a contraindication until adequately corrected through appropriate interventions ."
+            }
+          ],
+          "original_ppl": 7.155,
+          "hybrid_ppl": 10.91
+        },
+        {
+          "split": "test",
+          "doc_id": "pubmed_kimi_001563",
+          "source_shuffled_index": 1563,
+          "domain": "pubmed",
+          "generator": "kimi",
+          "subgroup_id": 1,
+          "num_sentences": 20,
+          "mask_ratio": 0.3,
+          "ai_indices": [
+            1,
+            2,
+            3,
+            9,
+            15,
+            16
+          ],
+          "sentence_labels": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              135
+            ],
+            [
+              136,
+              222
+            ],
+            [
+              223,
+              318
+            ],
+            [
+              319,
+              444
+            ],
+            [
+              445,
+              579
+            ],
+            [
+              580,
+              679
+            ],
+            [
+              680,
+              827
+            ],
+            [
+              828,
+              953
+            ],
+            [
+              954,
+              1161
+            ],
+            [
+              1162,
+              1338
+            ],
+            [
+              1339,
+              1459
+            ],
+            [
+              1460,
+              1567
+            ],
+            [
+              1568,
+              1728
+            ],
+            [
+              1729,
+              1873
+            ],
+            [
+              1874,
+              2126
+            ],
+            [
+              2127,
+              2227
+            ],
+            [
+              2228,
+              2363
+            ],
+            [
+              2364,
+              2483
+            ],
+            [
+              2484,
+              2596
+            ],
+            [
+              2597,
+              2781
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 1,
+              "text": "the patient presented as a phenotypic female with ambiguous genitalia noted at birth ."
+            },
+            {
+              "sentence_index": 2,
+              "text": "detailed examination revealed no palpable gonads in the inguinal region or labioscrotal folds ."
+            },
+            {
+              "sentence_index": 3,
+              "text": "the external genitalia showed a single perineal opening with no identifiable urethral meatus in the typical female location ."
+            },
+            {
+              "sentence_index": 9,
+              "text": "the contrast study revealed two separate urethral channels with the dorsal urethra coursing toward the clitoris and the ventral urethra opening into the anterior vaginal wall ."
+            },
+            {
+              "sentence_index": 15,
+              "text": "postoperative course was uneventful with successful urinary drainage and no complications observed ."
+            },
+            {
+              "sentence_index": 16,
+              "text": "at 6 - month follow - up , the child demonstrated normal voiding patterns without evidence of urethral stricture or fistula formation ."
+            }
+          ],
+          "original_ppl": 7.36,
+          "hybrid_ppl": 7.255
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "domain": "xsum",
+        "generator": "deepseek",
+        "subgroup_id": 2,
+        "oracle_model": "Llama-3.1-8B-Instruct (bf16)",
+        "mask_gamma": 0.3,
+        "mask_strategy": "block_random (1-3 blocks)",
+        "max_seq_len": 20,
+        "max_word_len": 96,
+        "ppl_margin": 15.0,
+        "total_samples": 4000,
+        "split": {
+          "train": 2800,
+          "val": 600,
+          "test": 600
+        },
+        "version": "v2.1"
+      },
+      "examples": [
+        {
+          "split": "train",
+          "doc_id": "xsum_deepseek_003260",
+          "source_shuffled_index": 3260,
+          "domain": "xsum",
+          "generator": "deepseek",
+          "subgroup_id": 2,
+          "num_sentences": 16,
+          "mask_ratio": 0.312,
+          "ai_indices": [
+            3,
+            4,
+            5,
+            6,
+            9
+          ],
+          "sentence_labels": [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              102
+            ],
+            [
+              103,
+              213
+            ],
+            [
+              214,
+              360
+            ],
+            [
+              361,
+              469
+            ],
+            [
+              470,
+              593
+            ],
+            [
+              594,
+              677
+            ],
+            [
+              678,
+              743
+            ],
+            [
+              744,
+              895
+            ],
+            [
+              896,
+              981
+            ],
+            [
+              982,
+              1084
+            ],
+            [
+              1085,
+              1284
+            ],
+            [
+              1285,
+              1408
+            ],
+            [
+              1409,
+              1518
+            ],
+            [
+              1519,
+              1718
+            ],
+            [
+              1719,
+              2031
+            ],
+            [
+              2032,
+              2219
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 3,
+              "text": "He explained he had been writing about moving to Wales and encountering a culture where he felt an outsider."
+            },
+            {
+              "sentence_index": 4,
+              "text": "He said he had been shocked by what he saw as a contrast between the welcoming Welsh culture and some intolerant attitudes."
+            },
+            {
+              "sentence_index": 5,
+              "text": "This was a reference to some English incomers he perceived as having extreme views."
+            },
+            {
+              "sentence_index": 6,
+              "text": "He said his 2001 article was an attempt to articulate that shock."
+            },
+            {
+              "sentence_index": 9,
+              "text": "Plaid Cymru's parliamentary candidate for Dwyfor Meirionnydd, Liz Saville Roberts, defended Mr Parker."
+            }
+          ],
+          "original_ppl": 10.042,
+          "hybrid_ppl": 10.022
+        },
+        {
+          "split": "train",
+          "doc_id": "xsum_deepseek_000398",
+          "source_shuffled_index": 398,
+          "domain": "xsum",
+          "generator": "deepseek",
+          "subgroup_id": 2,
+          "num_sentences": 20,
+          "mask_ratio": 0.3,
+          "ai_indices": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "sentence_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              104
+            ],
+            [
+              105,
+              243
+            ],
+            [
+              244,
+              319
+            ],
+            [
+              320,
+              454
+            ],
+            [
+              455,
+              610
+            ],
+            [
+              611,
+              726
+            ],
+            [
+              727,
+              983
+            ],
+            [
+              984,
+              1212
+            ],
+            [
+              1213,
+              1355
+            ],
+            [
+              1356,
+              1488
+            ],
+            [
+              1489,
+              1579
+            ],
+            [
+              1580,
+              1723
+            ],
+            [
+              1724,
+              1810
+            ],
+            [
+              1811,
+              1874
+            ],
+            [
+              1875,
+              1947
+            ],
+            [
+              1948,
+              2013
+            ],
+            [
+              2014,
+              2069
+            ],
+            [
+              2070,
+              2134
+            ],
+            [
+              2135,
+              2202
+            ],
+            [
+              2203,
+              2223
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 13,
+              "text": "The trial has heard from multiple witnesses over the past week."
+            },
+            {
+              "sentence_index": 14,
+              "text": "Prosecutors allege that Mr Badri knowingly possessed terrorist material."
+            },
+            {
+              "sentence_index": 15,
+              "text": "Defence lawyers counter that his intentions were purely academic."
+            },
+            {
+              "sentence_index": 16,
+              "text": "The jury has been shown excerpts from the seized files."
+            },
+            {
+              "sentence_index": 17,
+              "text": "Mr Badri's academic supervisors have testified to his character."
+            },
+            {
+              "sentence_index": 18,
+              "text": "The case is now nearing its conclusion after two weeks of evidence."
+            }
+          ],
+          "original_ppl": 8.614,
+          "hybrid_ppl": 8.621
+        },
+        {
+          "split": "val",
+          "doc_id": "xsum_deepseek_004256",
+          "source_shuffled_index": 4256,
+          "domain": "xsum",
+          "generator": "deepseek",
+          "subgroup_id": 2,
+          "num_sentences": 20,
+          "mask_ratio": 0.3,
+          "ai_indices": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "sentence_labels": [
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              111
+            ],
+            [
+              112,
+              219
+            ],
+            [
+              220,
+              278
+            ],
+            [
+              279,
+              341
+            ],
+            [
+              342,
+              409
+            ],
+            [
+              410,
+              487
+            ],
+            [
+              488,
+              548
+            ],
+            [
+              549,
+              619
+            ],
+            [
+              620,
+              752
+            ],
+            [
+              753,
+              847
+            ],
+            [
+              848,
+              1011
+            ],
+            [
+              1012,
+              1118
+            ],
+            [
+              1119,
+              1203
+            ],
+            [
+              1204,
+              1310
+            ],
+            [
+              1311,
+              1421
+            ],
+            [
+              1422,
+              1597
+            ],
+            [
+              1598,
+              1864
+            ],
+            [
+              1865,
+              2056
+            ],
+            [
+              2057,
+              2267
+            ],
+            [
+              2268,
+              2312
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 2,
+              "text": "That quick double strike put Motherwell firmly in control."
+            },
+            {
+              "sentence_index": 3,
+              "text": "Thistle barely threatened for the remainder of the first half."
+            },
+            {
+              "sentence_index": 4,
+              "text": "The visitors improved after the break and enjoyed more of the ball."
+            },
+            {
+              "sentence_index": 5,
+              "text": "Striker Ade Azeez was particularly active, driving at the Motherwell defence."
+            },
+            {
+              "sentence_index": 6,
+              "text": "Yet clear-cut chances remained elusive for the Glasgow side."
+            },
+            {
+              "sentence_index": 7,
+              "text": "Motherwell, meanwhile, remained organised and disciplined at the back."
+            }
+          ],
+          "original_ppl": 9.877,
+          "hybrid_ppl": 10.514
+        },
+        {
+          "split": "test",
+          "doc_id": "xsum_deepseek_002505",
+          "source_shuffled_index": 2505,
+          "domain": "xsum",
+          "generator": "deepseek",
+          "subgroup_id": 2,
+          "num_sentences": 20,
+          "mask_ratio": 0.3,
+          "ai_indices": [
+            1,
+            6,
+            7,
+            8,
+            9,
+            11
+          ],
+          "sentence_labels": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              131
+            ],
+            [
+              132,
+              181
+            ],
+            [
+              182,
+              254
+            ],
+            [
+              255,
+              332
+            ],
+            [
+              333,
+              522
+            ],
+            [
+              523,
+              717
+            ],
+            [
+              718,
+              786
+            ],
+            [
+              787,
+              859
+            ],
+            [
+              860,
+              935
+            ],
+            [
+              936,
+              1021
+            ],
+            [
+              1022,
+              1222
+            ],
+            [
+              1223,
+              1303
+            ],
+            [
+              1304,
+              1367
+            ],
+            [
+              1368,
+              1439
+            ],
+            [
+              1440,
+              1592
+            ],
+            [
+              1593,
+              1676
+            ],
+            [
+              1677,
+              1798
+            ],
+            [
+              1799,
+              2002
+            ],
+            [
+              2003,
+              2228
+            ],
+            [
+              2229,
+              2324
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 1,
+              "text": "After the sentence about Turkey hosting refugees."
+            },
+            {
+              "sentence_index": 6,
+              "text": "The issue is expected to dominate the agenda at the Brussels summit."
+            },
+            {
+              "sentence_index": 7,
+              "text": "EU leaders have been holding preparatory meetings to find common ground."
+            },
+            {
+              "sentence_index": 8,
+              "text": "Turkey is seeking more financial aid from the EU to cope with the refugees."
+            },
+            {
+              "sentence_index": 9,
+              "text": "In return, the EU wants Turkey to tighten its borders to prevent irregular migration."
+            },
+            {
+              "sentence_index": 11,
+              "text": "After the draft conclusions sentence and before the statistic on refused asylum."
+            }
+          ],
+          "original_ppl": 9.5,
+          "hybrid_ppl": 10.206
+        }
+      ]
+    },
+    {
+      "metadata": {
+        "domain": "xsum",
+        "generator": "kimi",
+        "subgroup_id": 3,
+        "oracle_model": "Llama-3.1-8B-Instruct (bf16)",
+        "mask_gamma": 0.3,
+        "mask_strategy": "block_random (1-3 blocks)",
+        "max_seq_len": 20,
+        "max_word_len": 96,
+        "ppl_margin": 15.0,
+        "total_samples": 4000,
+        "split": {
+          "train": 2800,
+          "val": 600,
+          "test": 600
+        },
+        "version": "v2.1"
+      },
+      "examples": [
+        {
+          "split": "train",
+          "doc_id": "xsum_kimi_002436",
+          "source_shuffled_index": 2436,
+          "domain": "xsum",
+          "generator": "kimi",
+          "subgroup_id": 3,
+          "num_sentences": 11,
+          "mask_ratio": 0.273,
+          "ai_indices": [
+            5,
+            6,
+            7
+          ],
+          "sentence_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              95
+            ],
+            [
+              96,
+              208
+            ],
+            [
+              209,
+              333
+            ],
+            [
+              334,
+              424
+            ],
+            [
+              425,
+              547
+            ],
+            [
+              548,
+              641
+            ],
+            [
+              642,
+              745
+            ],
+            [
+              746,
+              836
+            ],
+            [
+              837,
+              948
+            ],
+            [
+              949,
+              1092
+            ],
+            [
+              1093,
+              1157
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 5,
+              "text": "The programme saw musician Gene Simmons transform a group of schoolchildren into a rock band."
+            },
+            {
+              "sentence_index": 6,
+              "text": "After the show, Hardman performed under the stage name Lil' Chris and released his debut album in 2006."
+            },
+            {
+              "sentence_index": 7,
+              "text": "His family added: \"He brought joy to so many people through his music and television work."
+            }
+          ],
+          "original_ppl": 9.035,
+          "hybrid_ppl": 7.892
+        },
+        {
+          "split": "train",
+          "doc_id": "xsum_kimi_000295",
+          "source_shuffled_index": 295,
+          "domain": "xsum",
+          "generator": "kimi",
+          "subgroup_id": 3,
+          "num_sentences": 16,
+          "mask_ratio": 0.312,
+          "ai_indices": [
+            2,
+            8,
+            11,
+            12,
+            13
+          ],
+          "sentence_labels": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              115
+            ],
+            [
+              116,
+              265
+            ],
+            [
+              266,
+              392
+            ],
+            [
+              393,
+              470
+            ],
+            [
+              471,
+              602
+            ],
+            [
+              603,
+              894
+            ],
+            [
+              895,
+              1073
+            ],
+            [
+              1074,
+              1219
+            ],
+            [
+              1220,
+              1334
+            ],
+            [
+              1335,
+              1591
+            ],
+            [
+              1592,
+              1846
+            ],
+            [
+              1847,
+              1930
+            ],
+            [
+              1931,
+              2056
+            ],
+            [
+              2057,
+              2180
+            ],
+            [
+              2181,
+              2279
+            ],
+            [
+              2280,
+              2306
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 2,
+              "text": "General Rose, former head of the SAS, said he did not support the pro-EU stance and his name was included without his consent."
+            },
+            {
+              "sentence_index": 8,
+              "text": "We are stronger when we play our full role in keeping the EU strong and using our influence to shape its policies."
+            },
+            {
+              "sentence_index": 11,
+              "text": "Downing Street said it had apologised to General Rose for the administrative error."
+            },
+            {
+              "sentence_index": 12,
+              "text": "A Number 10 spokesman said the mistake was \"deeply regrettable\" and steps had been taken to ensure it would not happen again."
+            },
+            {
+              "sentence_index": 13,
+              "text": "The letter was organised by Downing Street as part of the government's campaign for the UK to remain in the European Union."
+            }
+          ],
+          "original_ppl": 8.465,
+          "hybrid_ppl": 7.408
+        },
+        {
+          "split": "val",
+          "doc_id": "xsum_kimi_003160",
+          "source_shuffled_index": 3160,
+          "domain": "xsum",
+          "generator": "kimi",
+          "subgroup_id": 3,
+          "num_sentences": 20,
+          "mask_ratio": 0.3,
+          "ai_indices": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "sentence_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              204
+            ],
+            [
+              205,
+              347
+            ],
+            [
+              348,
+              502
+            ],
+            [
+              503,
+              665
+            ],
+            [
+              666,
+              856
+            ],
+            [
+              857,
+              967
+            ],
+            [
+              968,
+              1009
+            ],
+            [
+              1010,
+              1133
+            ],
+            [
+              1134,
+              1236
+            ],
+            [
+              1237,
+              1351
+            ],
+            [
+              1352,
+              1455
+            ],
+            [
+              1456,
+              1567
+            ],
+            [
+              1568,
+              1670
+            ],
+            [
+              1671,
+              1764
+            ],
+            [
+              1765,
+              1827
+            ],
+            [
+              1828,
+              1862
+            ],
+            [
+              1863,
+              1978
+            ],
+            [
+              1979,
+              2149
+            ],
+            [
+              2150,
+              2182
+            ],
+            [
+              2183,
+              2249
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 7,
+              "text": "Portsmouth manager Kenny Jackett made a double substitution in the 65th minute in an attempt to change the game's momentum."
+            },
+            {
+              "sentence_index": 8,
+              "text": "Oxford substitute Jon Obika forced a smart save from McGee moments after coming on in the 78th minute."
+            },
+            {
+              "sentence_index": 9,
+              "text": "The visitors pushed forward desperately but found Oxford's defence in resolute form throughout the closing stages."
+            },
+            {
+              "sentence_index": 10,
+              "text": "United's midfield trio of Ruffels, Hall and Payne controlled possession expertly to run down the clock."
+            },
+            {
+              "sentence_index": 11,
+              "text": "Frustration boiled over for Portsmouth as Christian Burgess was booked for a late challenge in the 88th minute."
+            },
+            {
+              "sentence_index": 12,
+              "text": "The victory lifts Oxford to second in the early League One table, while Portsmouth drop to 16th place."
+            }
+          ],
+          "original_ppl": 3.4,
+          "hybrid_ppl": 5.188
+        },
+        {
+          "split": "test",
+          "doc_id": "xsum_kimi_001918",
+          "source_shuffled_index": 1918,
+          "domain": "xsum",
+          "generator": "kimi",
+          "subgroup_id": 3,
+          "num_sentences": 15,
+          "mask_ratio": 0.267,
+          "ai_indices": [
+            9,
+            10,
+            11,
+            12
+          ],
+          "sentence_labels": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0
+          ],
+          "sentence_spans": [
+            [
+              0,
+              99
+            ],
+            [
+              100,
+              187
+            ],
+            [
+              188,
+              303
+            ],
+            [
+              304,
+              499
+            ],
+            [
+              500,
+              685
+            ],
+            [
+              686,
+              816
+            ],
+            [
+              817,
+              919
+            ],
+            [
+              920,
+              1041
+            ],
+            [
+              1042,
+              1197
+            ],
+            [
+              1198,
+              1287
+            ],
+            [
+              1288,
+              1370
+            ],
+            [
+              1371,
+              1475
+            ],
+            [
+              1476,
+              1552
+            ],
+            [
+              1553,
+              1736
+            ],
+            [
+              1737,
+              1900
+            ]
+          ],
+          "ai_replacements": [
+            {
+              "sentence_index": 9,
+              "text": "Critics argue the current system is outdated and fails to reflect modern costs and needs."
+            },
+            {
+              "sentence_index": 10,
+              "text": "They want a new national funding formula introduced to even out these disparities."
+            },
+            {
+              "sentence_index": 11,
+              "text": "A Department for Education spokesperson said the government had already taken steps to address concerns."
+            },
+            {
+              "sentence_index": 12,
+              "text": "They added that a consultation on wider reforms would begin later this year."
+            }
+          ],
+          "original_ppl": 13.363,
+          "hybrid_ppl": 12.995
+        }
+      ]
+    }
+  ]
+}
